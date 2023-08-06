@@ -12,10 +12,12 @@ namespace Calculator
         {
             try
             {
+                // Instatiating new objects
                 InputConverter inputConverter = new InputConverter();
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
 
-                double firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
+                // Variables assigned the return value of expression within method
+                double firstNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine()); 
                 double secondNumber = inputConverter.ConvertInputToNumeric(Console.ReadLine());
                 string operation = Console.ReadLine();
 
