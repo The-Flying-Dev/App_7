@@ -18,6 +18,15 @@ namespace Calculator.Test.Unit
         }
 
         [TestMethod]
+        public void MultipliesTwoNumbersAndReturnsValidResultForNonSymbolOperation() // Naming convention: name of feature being tested
+        {
+            int number1 = 3;
+            int number2 = 4;
+            double result = _calculatorEngine.Calculate("multiply", number1, number2);
+            Assert.AreEqual(12, result); // 1st arg is expected result, 2nd arg is actual result
+        }
+
+        [TestMethod]
         public void AddsTwoNumbersAndReturnsValidResultForSymbolOperation() // Naming convention: name of feature being tested
         {
             int number1 = 3;
